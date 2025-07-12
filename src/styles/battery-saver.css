@@ -1,0 +1,238 @@
+/* Battery Saver CSS Optimizations */
+
+/* Disable animations when battery saver is active */
+.battery-saver-no-animations * {
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
+/* Simplified UI styles */
+.battery-saver-simplified {
+  /* Reduce shadows and effects */
+}
+
+.battery-saver-simplified .shadow-md,
+.battery-saver-simplified .shadow-lg,
+.battery-saver-simplified .shadow-xl {
+  box-shadow: none !important;
+}
+
+.battery-saver-simplified .hover\:shadow-lg:hover,
+.battery-saver-simplified .hover\:shadow-md:hover {
+  box-shadow: none !important;
+}
+
+/* Reduce gradients */
+.battery-saver-simplified .bg-gradient-to-r,
+.battery-saver-simplified .bg-gradient-to-l,
+.battery-saver-simplified .bg-gradient-to-t,
+.battery-saver-simplified .bg-gradient-to-b,
+.battery-saver-simplified .bg-gradient-to-br,
+.battery-saver-simplified .bg-gradient-to-bl {
+  background-image: none !important;
+}
+
+/* Dark mode for battery saving */
+.battery-saver-dark {
+  background-color: #1a1a1a !important;
+  color: #e5e5e5 !important;
+}
+
+.battery-saver-dark .bg-white {
+  background-color: #2a2a2a !important;
+}
+
+.battery-saver-dark .bg-slate-50 {
+  background-color: #1f1f1f !important;
+}
+
+.battery-saver-dark .bg-slate-100 {
+  background-color: #2a2a2a !important;
+}
+
+.battery-saver-dark .text-slate-800 {
+  color: #e5e5e5 !important;
+}
+
+.battery-saver-dark .text-slate-600 {
+  color: #FAF9F6 !important;
+}
+
+.battery-saver-dark .text-slate-500 {
+  color: #FAF9F6 !important;
+}
+
+.battery-saver-dark .border-slate-200 {
+  border-color: #404040 !important;
+}
+
+.battery-saver-dark .border-slate-300 {
+  border-color: #525252 !important;
+}
+
+/* Performance level specific optimizations */
+.performance-low {
+  /* Ultra-low performance mode */
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.performance-low * {
+  will-change: auto !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.performance-medium {
+  /* Medium performance mode */
+  image-rendering: auto;
+}
+
+.performance-medium .blur-sm,
+.performance-medium .blur-md,
+.performance-medium .blur-lg {
+  filter: none !important;
+}
+
+.performance-high {
+  /* High performance mode - no restrictions */
+}
+
+/* Reduce visual complexity */
+.battery-saver-simplified .rounded-xl {
+  border-radius: 0.5rem !important;
+}
+
+.battery-saver-simplified .rounded-lg {
+  border-radius: 0.25rem !important;
+}
+
+/* Hide decorative elements */
+.battery-saver-simplified .decoration-element {
+  display: none !important;
+}
+
+/* Optimize table rendering */
+.battery-saver-simplified table {
+  border-collapse: collapse;
+}
+
+.battery-saver-simplified .table-auto {
+  table-layout: fixed !important;
+}
+
+/* Reduce backdrop effects */
+.battery-saver-simplified .backdrop-blur,
+.battery-saver-simplified .backdrop-filter {
+  backdrop-filter: none !important;
+}
+
+/* Optimize grid layouts for low performance */
+.performance-low .grid-cols-4 {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.performance-low .grid-cols-3 {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.performance-medium .grid-cols-4 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+/* Reduce opacity effects */
+.battery-saver-simplified .opacity-75,
+.battery-saver-simplified .opacity-50,
+.battery-saver-simplified .opacity-25 {
+  opacity: 1 !important;
+}
+
+/* Simplify hover effects */
+.battery-saver-simplified .hover\:bg-slate-50:hover,
+.battery-saver-simplified .hover\:bg-slate-100:hover {
+  background-color: transparent !important;
+}
+
+/* Battery saver indicator styles */
+.battery-saver-indicator {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  backdrop-filter: blur(8px);
+}
+
+.battery-saver-dark .battery-saver-indicator {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: none;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  .battery-saver-simplified .p-6 {
+    padding: 1rem !important;
+  }
+  
+  .battery-saver-simplified .p-4 {
+    padding: 0.75rem !important;
+  }
+  
+  .battery-saver-simplified .space-y-6 > * + * {
+    margin-top: 1rem !important;
+  }
+  
+  .battery-saver-simplified .space-y-4 > * + * {
+    margin-top: 0.75rem !important;
+  }
+  
+  /* Reduce font sizes slightly */
+  .performance-low .text-3xl {
+    font-size: 1.5rem !important;
+  }
+  
+  .performance-low .text-2xl {
+    font-size: 1.25rem !important;
+  }
+  
+  .performance-low .text-xl {
+    font-size: 1.125rem !important;
+  }
+}
+
+/* Print optimizations for battery saving */
+@media print {
+  .battery-saver-simplified * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Reduce GPU usage */
+.battery-saver-simplified * {
+  transform: none !important;
+  will-change: auto !important;
+}
+
+/* Optimize scrolling performance */
+.battery-saver-simplified .overflow-y-auto {
+  -webkit-overflow-scrolling: auto;
+  scroll-behavior: auto !important;
+}
+
+/* Disable smooth scrolling */
+.battery-saver-no-animations {
+  scroll-behavior: auto !important;
+}
+
+.battery-saver-no-animations * {
+  scroll-behavior: auto !important;
+}
