@@ -51,3 +51,25 @@ npm install
 
 # Start the app
 npm run dev
+
+
+
+## Roadmap
+✅ Basic inventory tracking
+
+✅ Expiry alerts
+
+✅ Survival duration calculator
+
+✅ Multi-group / person support
+
+⏳ Mobile-friendly interface (untested)
+
+✅ Import/export data via CSV/JSON
+
+⏳ Plugin system (adds external battery pack monitoring, integration with home assistant api)
+
+----
+## License
+Creative Commons Attribution-NonCommercial (CC BY-NC 4.0)
+https://creativecommons.org/licenses/by-nc/4.0/
