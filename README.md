@@ -1,5 +1,7 @@
+![Logo image](logo.png)
+
 # PrepperTrack
-(currently a work in progress, bugs are most likly present)
+(currently a work in progress, bugs are most likely present)
 
 **Self-Hosted Prepper Supply & Food Shelf-Life Tracker**
 
